@@ -1,0 +1,12 @@
+Ext.define("AM.view.BookPanel",{
+	extend:'Ext.tree.Panel',
+	title:'图书管理',
+	alias:'widget.bookPanel',
+	iconCls:"book_edit",
+    border:false,
+    store:'BookStore',
+    rootVisible:false,
+    initComponent:function(){
+    	this.callParent(arguments);
+    }     
+});

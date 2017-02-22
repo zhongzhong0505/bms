@@ -1,0 +1,116 @@
+.head{
+		background:url("../images/head.png") repeat-x !important;
+		height:30px;
+		font-size:18px;
+		color:#FFFFFF;
+		font-family:"宋体";
+		font-weight:bold;
+		padding-left:10px;
+		
+		line-height: 30px;
+	}
+.plugin{
+	background:url("../images/plugin.gif")   no-repeat !important;
+}
+.icon-info{
+	background:url("../images/info.gif")   no-repeat !important;
+}
+.icon-delete{
+	background:url("../images/delete.gif")   no-repeat !important;
+}
+.icon-search{
+	background:url("../images/search.gif")   no-repeat !important;
+}
+.user-edit{
+	background:url("../images/group.png")   no-repeat !important;
+}
+.pencil_go{
+	background:url("../images/pencil_go.png")  no-repeat  !important;
+}
+.book_edit{
+	background:url("../images/book_edit.png")   no-repeat !important;
+}
+.server_chart{
+	background:url("../images/server_chart.png") no-repeat !important;
+}
+.date{
+	background:url("../images/date.png") no-repeat !important;
+}
+.chart_pie{
+	background:url("../images/chart_pie.png")   no-repeat !important;
+}
+.chart_bar{
+	background:url("../images/chart_bar.png")   no-repeat !important;
+}
+.chart_bar_edit{
+	background:url("../images/chart_bar_edit.png")   no-repeat !important;
+}
+.computer_edit{
+	background:url("../images/computer_edit.png")  no-repeat  !important;
+}
+.book_open{
+	background:url("../images/book_open.png")  no-repeat  !important;
+}
+.brick_delete{
+	background:url("../images/brick_delete.png")  no-repeat  !important;
+}
+.borrow_search{
+	background:url("../images/search.gif")  no-repeat  !important;
+}
+.borrow_printer{
+	background:url("../images/printer.png")   no-repeat !important;
+}
+.table_delete{
+	background:url("../images/del.gif")  no-repeat !important;
+}
+.table_add{
+	background:url("../images/add.gif")   no-repeat !important;
+}
+.table_edit{
+	background:url("../images/edit.gif")   no-repeat !important;
+}
+.link_go{
+	background:url("../images/link_go.png")   no-repeat !important;
+}
+.application_xp{
+	background:url("../images/application_xp.png")   no-repeat !important;
+}
+.arrow_refresh{
+	background:url("../images/arrow_refresh.png")   no-repeat !important;
+}
+.chart_pie_edit{
+	background:url("../images/chart_pie_edit.png")   no-repeat !important;
+}
+.building_go{
+	background:url("../images/building_go.png")   no-repeat !important;
+}
+.computer_go{
+	background:url("../images/computer_go.png")   no-repeat !important;
+}
+.ko{
+	background:url("../images/ok.png")   no-repeat !important;
+}
+.user_go{
+	background:url("../images/user_go.png")   no-repeat !important;
+}
+.book_next{
+	background:url("../images/book_next.png")   no-repeat !important;
+}
+.book_previous{
+	background:url("../images/book_previous.png")   no-repeat !important;
+}
+.door_in{
+	background:url("../images/door_in.png")   no-repeat !important;
+}
+.door_out{
+	background:url("../images/door_out.png")   no-repeat !important;
+}
+
+.msg{
+	font-size:12px;
+	font-family:"宋体";
+	color:#FFFFFF;
+	font-weight:bold;
+	float: right;
+	padding-right: 40px;
+}

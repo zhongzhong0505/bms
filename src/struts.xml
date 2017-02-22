@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="bms.mysql.action" extends="struts-default" namespace="/">
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="bms.mysql.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="bmsDefaultStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="loginInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+
+		
+		<!-- 配置全局结果集 -->
+		<global-results>
+			<result name="error">/login.jsp</result>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		
+		<!-- 配置全局异常映射 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		
+		
+		<!-- 用户登录 -->
+		<action name="login" class="bms.mysql.action.LoginAction" method="login">
+			<result>WEB-INF/welcome.jsp</result>
+			<interceptor-ref name="bmsDefaultStack"/>
+		</action>
+		
+		
+	</package>
+	
+	<package name="bms.json" extends="json-default" namespace="/">
+		
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="bms.mysql.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="bmsDefaultStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="loginInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 配置默认拦截器 -->
+		<default-interceptor-ref name="bmsDefaultStack"/>
+		
+		<!-- 配置全局结果集 -->
+		<global-results>
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="login">/login.jsp</result>
+			<!-- 导出excel -->
+			<result name="export" type="stream">
+				<param name="allowCaching">true</param>
+				<param name="inputName">input</param>
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${filename}"</param>
+			</result>
+		</global-results>
+		
+		
+		<!-- 退出登录 -->
+		<action name="exit" class="bms.mysql.action.ExitAction" method="exit">
+			<result type="json"/>
+		</action>
+		
+		<!-- 所有图书-->
+		<action name="bookInfo" class="bms.mysql.action.BookInfoAction"/>
+			
+		<!-- 所有用户信息 -->
+		<action name="user" class="bms.mysql.action.UserAction"/>
+		<!-- 借阅历史 -->
+		<action name="historys" class="bms.mysql.action.BorrowHistoryAction"/>
+		<!-- 借阅查询 -->
+		<action name="borrowSearch" class="bms.mysql.action.BorrowSearchAction"/>
+		<!-- 图书类别统计 -->
+		<action name="bookCharts" class="bms.mysql.action.BookChartsAction"/>
+		<!-- 图书状态统计 -->
+		<action name="bookStatus" class="bms.mysql.action.BookStatusAction"/>
+		<action name="admin" class="bms.mysql.action.LoginAction" />
+		<action name="data" class="bms.mysql.action.DataStaticAction"/>
+		<!-- 借阅操作 -->
+		<action name="borrow" class="bms.mysql.action.BorrowAction"/>
+	</package>
+</struts>    

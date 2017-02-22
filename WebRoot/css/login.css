@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:url(../images/login.png);
+}
+
+#center{
+	width:1000px;
+	height:575px;
+	margin:0 auto;
+	background-image:url(../images/login1.png);
+}
+#login{
+    width:700px;
+	height:200px;
+	float:left;
+	margin-top:200px;
+	margin-left:165px;
+}
+
+#login-left{
+	width:320px;
+	height:200px;
+	float:left;
+
+}
+
+#login-right{
+	width:350px;
+	height:200px;
+	float:right;
+
+}
+
+.tab{
+	width:320px;
+	font-size:12px;
+}
+
+.tr{
+	height:30px;
+}
+
+a:link{
+	text-decoration:none;
+	color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Ext.define("AM.view.StatisticPanel",{
+	extend:'Ext.tree.Panel',
+	title:'统计分析',
+	alias:'widget.statisticPanel',
+	iconCls:"server_chart",
+	border:false,
+    store:'StatisticStore',
+    rootVisible:false,
+    initComponent:function(){
+    	this.callParent(arguments);
+    }     
+});

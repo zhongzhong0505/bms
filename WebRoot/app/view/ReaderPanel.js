@@ -1,0 +1,12 @@
+Ext.define("AM.view.ReaderPanel",{
+	extend:'Ext.tree.Panel',
+	title:'读者管理',
+	alias:'widget.readerPanel',
+	iconCls:"user-edit",
+	border:false,
+    store:'ReaderStore',
+    rootVisible:false,
+    initComponent:function(){
+    	this.callParent(arguments);
+    }     
+});
